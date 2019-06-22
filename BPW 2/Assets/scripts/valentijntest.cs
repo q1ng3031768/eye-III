@@ -2,17 +2,17 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public enum EnemyStates { Idle = 0, Attack = 1, Patrol = 2}
+public enum PortalStates { Start = 0, KeyOne = 1, KeyTwo = 2}
 
 public class valentijntest : MonoBehaviour
 {
 
-    public EnemyStates state;
+    public PortalStates state;
 
     // Start is called before the first frame update
     void Start()
     {
-        state = EnemyStates.Idle;
+        state = PortalStates.Start;
     }
 
     // Update is called once per frame
@@ -25,22 +25,28 @@ public class valentijntest : MonoBehaviour
     {
         switch (state)
         {
-            case EnemyStates.Attack:
+            case PortalStates.Start:
+
+                //if(condition)
+                //{
+                //state = EnemyStates.KeyOne;
+                //}
 
                 break;
 
-            case EnemyStates.Idle:
+            case PortalStates.KeyOne:
 
                 //idle code
 
                 //if(condition)
                 //{
-                    //state = EnemyStates.Attack;
+                //state = EnemyStates.KeyTwo;
                 //}
 
                 break;
 
-            case EnemyStates.Patrol:
+            case PortalStates.KeyTwo:
+
                 break;
 
         }

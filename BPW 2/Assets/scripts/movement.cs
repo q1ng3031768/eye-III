@@ -13,6 +13,8 @@ public class movement : MonoBehaviour
     bool jump = false;
     bool crouch = false;
 
+
+
     // Update is called once per frame
     void Update()
     {
@@ -41,4 +43,6 @@ public class movement : MonoBehaviour
         controls.Move(horizontalMove * Time.fixedDeltaTime, crouch, jump);
         jump = false;
     }
+
+
 }
