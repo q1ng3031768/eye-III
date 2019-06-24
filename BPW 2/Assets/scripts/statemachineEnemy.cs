@@ -63,25 +63,18 @@ public class statemachineEnemy : MonoBehaviour
                     transform.localScale = theScale;
                 }
                 //code for dagger killing enemy
-                if ((transform.position.y - dagger.transform.position.y) >= 5 && (transform.position.x - dagger.transform.position.x) >= 5)
+                if ((transform.position.y - dagger.transform.position.y) >= 10 && (transform.position.x - dagger.transform.position.x) >= 10)
                 {
                     state = EnemyStates.dead;
                 }
 
-                //code for enemy killing you
-                //if ((target.transform.position.x - transform.position.x) = 0) // && (target.transform.position.y - transform.position.y) = 0)
-                    break;
+                break;
 
             case EnemyStates.dead:
                 //effects of dagger
                 keytoappear.SetActive(true);
                 enemytodestroy.SetActive(false);
                 break;
-
-            //case EnemyStates.kill:
-
-                //reload scene
-                //break;
 
         }
     }
