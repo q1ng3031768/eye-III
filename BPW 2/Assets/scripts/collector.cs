@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class collector : MonoBehaviour
 {
@@ -20,7 +21,8 @@ public class collector : MonoBehaviour
         keycount += 1;
         key.SetActive(false);
         TimeBoy();
-        //load
+        //loadnextscene
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex+1);
     }
 
     IEnumerator TimeBoy()
