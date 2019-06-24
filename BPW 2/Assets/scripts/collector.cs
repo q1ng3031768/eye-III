@@ -6,24 +6,27 @@ public class collector : MonoBehaviour
 {
     float keycount = 0;
     public GameObject player;
-    public GameObject thiskey;
+    public GameObject key;
     public GameObject soundeffect;
 
-    // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
-        
+        StartCoroutine(TimeBoy());
     }
 
-    // Update is called once per frame
-    private void OnTriggerEnter(Collider other)
+    public void OnTriggerEnter2D(Collider2D other)
     {
-        if (other != null)
-        {
-            Debug.Log("did it???");
-            soundeffect.SetActive(true);
-            keycount += 1;
-            thiskey.SetActive(false);
-        }
+        soundeffect.SetActive(true);
+        keycount += 1;
+        key.SetActive(false);
+        TimeBoy();
+        //load
+    }
+
+    IEnumerator TimeBoy()
+    {
+        print(Time.time);
+        yield return new WaitForSeconds(10);
+        print(Time.time);
     }
 }
